@@ -1,0 +1,58 @@
+services:
+
+  app:
+    build: .
+    container_name: laravel_app
+    volumes:
+      - .:/var/www
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    networks:
+      - backend_default
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    networks:
+      - backend_default
+    environment:
+      MYSQL_DATABASE: perelek
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    networks:
+      - backend_default
+    environment:
+      PMA_HOST: mysql
+    ports:
+      - "8080:80"
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n_automation
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - GENERIC_TIMEZONE=Asia/Jakarta
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - backend_default # Samakan dengan network yang dipakai mysql_db dan laravel
+
+volumes:
+  n8n_data:
+
+networks:
+  backend_default:
+    external: true

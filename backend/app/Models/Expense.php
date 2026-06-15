@@ -4,24 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
 
 class Expense extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'category',
-        'description',
-        'amount',
-        'expense_date',
-        'receipt_path',
-        'created_by',
+        'title', 'category', 'nominal',
+        'description', 'date', 'created_by',
     ];
 
     protected $casts = [
-        'expense_date' => 'date',
-        'amount' => 'decimal:2',
+        'nominal' => 'decimal:2',
+        'date'    => 'date',
     ];
 
     public function creator()

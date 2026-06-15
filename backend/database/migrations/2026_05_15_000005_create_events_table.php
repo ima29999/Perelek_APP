@@ -12,13 +12,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('location');
-            $table->date('event_date');
-            $table->string('event_time')->nullable();
-            $table->boolean('notify_h1')->default(true);
-            $table->boolean('notify_h0')->default(true);
+            $table->string('location')->nullable();
+            $table->dateTime('start_date');
+            $table->dateTime('end_date')->nullable();
+            $table->string('color')->default('#3B82F6');
             $table->foreignId('created_by')->nullable()->constrained('users')->nullOnDelete();
-            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
