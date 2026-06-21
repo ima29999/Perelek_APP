@@ -1,4 +1,4 @@
-# Sistem Keuangan Perelek Digital Berbasis Donasi Sosial
+<img width="193" height="392" alt="image" src="https://github.com/user-attachments/assets/b97f5ee0-81b8-40ad-b8bf-7907b6a76895" /># Sistem Keuangan Perelek Digital Berbasis Donasi Sosial
 # Kelompok 3
 
 
@@ -13,66 +13,67 @@ Warga: Cek tagihan, bayar iuran, lihat laporan keuangan transparan, cek pengumum
 Sistem Pembayaran: Upload bukti bayar, tracking status pembayaran real-time
 Laporan Keuangan: Transparansi penuh dengan grafik tren pemasukan/pengeluaran
 ## 🚀 Cara Menjalankan Project
-A. Persiapan Awal
+## A. Persiapan Awal
 Pastikan sudah install:
 
 ✅ Flutter SDK 3.0+ (download)
 ✅ Dart 3.0+ (included dengan Flutter)
 ✅ Android Studio / VS Code + ekstensi Flutter
 ✅ Device/Emulator (Android atau iOS)
-B. Setup Backend (Laravel) 
-# 1. Masuk folder backend
+## B. Setup Backend (Laravel) 
+### 1. Masuk folder backend
 cd perelek/backend
 
-# 2. Install dependencies PHP
+### 2. Install dependencies PHP
 composer install
 
-# 3. Setup environment
+### 3. Setup environment
 cp .env.example .env
 php artisan key:generate
 
-# 4. Setup database (pastikan MySQL running)
+### 4. Setup database (pastikan MySQL running)
 php artisan migrate
 php artisan db:seed  # (optional) untuk data dummy
 
-# 5. Jalankan server Laravel
+### 5. Jalankan server Laravel
 php artisan serve
-# Server berjalan di http://localhost:8000
-C. Setup Frontend (Flutter)
-# 1. Masuk folder frontend
+### Server berjalan di http://localhost:8000
+
+##C. Setup Frontend (Flutter)
+### 1. Masuk folder frontend
 cd perelek/frontend
 
-# 2. Install dependencies Flutter
+### 2. Install dependencies Flutter
 flutter pub get
 
-# 3. Download font Poppins (PENTING!)
-# - Unduh dari https://fonts.google.com/specimen/Poppins
-# - Copykan 4 file ke: assets/fonts/
-#   • Poppins-Regular.ttf
-#   • Poppins-Medium.ttf
-#   • Poppins-SemiBold.ttf
-#   • Poppins-Bold.ttf
+### 3. Download font Poppins (PENTING!)
+#### - Unduh dari https://fonts.google.com/specimen/Poppins
+#### - Copykan 4 file ke: assets/fonts/
+####   • Poppins-Regular.ttf
+####   • Poppins-Medium.ttf
+####   • Poppins-SemiBold.ttf
+####   • Poppins-Bold.ttf
 
-# 4. Konfigurasi URL API
-# Edit: lib/core/constants/app_constants.dart
-# Pilih sesuai device:
+### 4. Konfigurasi URL API
+#### Edit: lib/core/constants/app_constants.dart
+#### Pilih sesuai device:
 
-# Android Emulator
+#### Android Emulator
 baseUrl: 'http://10.0.2.2:8000/api'
 
-# iOS Simulator
+#### iOS Simulator
 baseUrl: 'http://localhost:8000/api'
 
-# Device fisik
+#### Device fisik
 baseUrl: 'http://192.168.x.x:8000/api'  # (ganti dengan IP lokal PC)
-D. Jalankan Aplikasi
-# Lihat device yang tersedia
+##D. Jalankan Aplikasi
+#### Lihat device yang tersedia
 flutter devices
 
-# Jalankan di emulator/device pilihan
+#### Jalankan di emulator/device pilihan
 flutter run
 
-# Atau specify device
+#### Atau specify device
 flutter run -d emulator-5554
 
 ---
@@ -178,9 +179,6 @@ static const String baseUrl = 'https://api.perelek.id/api';
 | Warga | budi@example.com | password123 |
 | Warga | siti@example.com | password123 |
 ---
-❓ Troubleshooting
-Masalah	Solusi
-Font tidak muncul	Pastikan folder assets/fonts/ punya 4 file Poppins dan update pubspec.yaml
-API tidak terkoneksi	Cek URL API di app_constants.dart, pastikan Laravel running
-Build error	Jalankan flutter clean lalu flutter pub get
-Emulator blank	Tunggu loading, atau coba flutter run -d ulang
+##❓ Troubleshooting
+<img width="391" height="185" alt="image" src="https://github.com/user-attachments/assets/78c6dda4-e503-4e45-9e73-36160fd3c721" />
+
