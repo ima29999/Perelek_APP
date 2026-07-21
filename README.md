@@ -1,12 +1,12 @@
 # Kelompok 3 Sistem Informasi A2
-Nazwa Ima Fadia 20241320084
-Muhammad Ilyas Fauzi 20241320090
-Julia Desteny Deodonia Langkedeng 20241320066
-Muhammad Rifqy Wildan 20241320055
-Aal Maulana Rahmat 20241320071
-Gilang Bungsu Putra Anugrah 20241320082
-Wahyu Bonita Juliana Sari 20241320079
-Caryksha Aulia Putri 20241320052
+- Nazwa Ima Fadia 20241320084
+- Muhammad Ilyas Fauzi 20241320090
+- Julia Desteny Deodonia Langkedeng 20241320066
+- Muhammad Rifqy Wildan 20241320055
+- Aal Maulana Rahmat 20241320071
+- Gilang Bungsu Putra Anugrah 20241320082
+- Wahyu Bonita Juliana Sari 20241320079
+- Caryksha Aulia Putri 20241320052
 
 <div align="center">
 
